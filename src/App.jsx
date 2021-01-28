@@ -10,6 +10,10 @@ const App = () => {
           <br />
           <input type="text" placeholder="Add a Item" />
           <button> + </button>
+
+          <ol>
+            <li>Buy Apple</li>
+          </ol>
         </div>
       </div>
     </>
