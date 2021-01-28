@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
+  const [inputList, setInputList] = useState('');
+
+  const itemAdd = (event) => {
+    setInputList(event.target.value);
+  };
+
+  const addListItem = () => {};
+
   return (
     <>
       <div className="app">
@@ -8,11 +16,11 @@ const App = () => {
           <br />
           <h1>ToDo List</h1>
           <br />
-          <input type="text" placeholder="Add a Item" />
-          <button> + </button>
+          <input type="text" placeholder="Add a Item" onChange={itemAdd} />
+          <button onClick={addListItem}> + </button>
 
           <ol>
-            <li>Buy Apple</li>
+            <li>{inputList}</li>
           </ol>
         </div>
       </div>
